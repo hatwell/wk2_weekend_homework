@@ -4,7 +4,7 @@ class Room
   attr_reader :capacity
   attr_accessor :guest_count, :guests, :songs
 
-  def initialize(capacity)
+  def initialize(capacity, songs)
     @capacity = capacity
     @guest_count = 0
     @guests = []
@@ -15,9 +15,12 @@ class Room
     @guests << guest
   end
 
-  def add_song_to_room(artist, title)
-    new_song = Song.new(artist, title)
-    @songs << new_song
+  def check_out_guest(guest)
+    @guests.delete(guest)
+  end
+
+  def add_song_to_room(song)
+    @songs << song
   end
 
 end
