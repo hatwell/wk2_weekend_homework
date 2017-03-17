@@ -37,6 +37,10 @@ class RoomTest < Minitest::Test
     assert_equal(@wichita_lineman, @small_room.songs.last)
   end
 
+  def test_room_capacity_check
+    assert_equal(true, @small_room.check_room_under_capacity)
+  end
+
 
 
 

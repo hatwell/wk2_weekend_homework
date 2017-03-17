@@ -9,10 +9,15 @@ class Room
     @guest_count = 0
     @guests = []
     @songs = songs
+    @full_message = "Sorry, the room is full"
+  end
+
+  def check_room_under_capacity
+    @guests.length + 1 <= @capacity
   end
 
   def check_in_guest(guest)
-    @guests << guest
+    check_room_under_capacity ? @guests << guest : @full_message
   end
 
   def check_out_guest(guest)
@@ -22,5 +27,6 @@ class Room
   def add_song_to_room(song)
     @songs << song
   end
+
 
 end
