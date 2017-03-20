@@ -5,5 +5,8 @@ class KaraokeBarRunner
     @name_of_bar = name
   end
 
+  def start_up
+    "hello and welcome to "
+
 
 end

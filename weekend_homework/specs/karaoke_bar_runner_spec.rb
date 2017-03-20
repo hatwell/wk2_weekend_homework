@@ -16,4 +16,8 @@ class KaraokeBarRunnerTest
       @mr_brownstone = Song.new("Guns N Roses", "Mr Brownstone")
       @codeclan_caraoke = KaraokeBar.new("CodeClan Caraoke", 10)
     end
+
+    # def test_runner_welcomes_correct_name_of_karaoke_bar
+    #
+    # end
 end
